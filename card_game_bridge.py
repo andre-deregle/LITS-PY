@@ -280,7 +280,9 @@ def your_move(card = None):
           possible_moves.append(each)
         if each[1:] == start_card[1:]:
           possible_moves.append(each)
-    print possible_moves
+    print 'Possible moves: [',
+    for card in possible_moves: print card,
+    print ']'
     if (len(possible_moves) == 0) and (your_tries == 0):
       additional_card = random.choice(deck)
       deck.remove(additional_card)
